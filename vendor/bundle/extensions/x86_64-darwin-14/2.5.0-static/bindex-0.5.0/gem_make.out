@@ -1,0 +1,15 @@
+current directory: /Users/SHINSUKE/Desktop/BookReview/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/Users/SHINSUKE/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190202-28324-1s1f4wl.rb extconf.rb
+creating Makefile
+
+current directory: /Users/SHINSUKE/Desktop/BookReview/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/SHINSUKE/Desktop/BookReview/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/SHINSUKE/Desktop/BookReview/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20190202-28324-mbdiqk/bindex
