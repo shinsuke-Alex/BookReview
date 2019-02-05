@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'devise'
 gem 'pry-byebug'
 gem 'bootstrap', '~> 4.2.1'
 gem 'rails', '~> 5.2.1'
