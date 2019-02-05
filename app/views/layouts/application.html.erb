@@ -9,14 +9,27 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 　<body>
-    <nav class="nav nav-pills flex-column flex-sm-row">
-      <%= link_to "Book Review", root_path, class: "flex-sm-fill font-weight-bold bg-info text-white nav-link active" %>
-      <%= link_to "Add Book", new_book_path, class: "flex-sm-fill  bg-success  text-center text-white nav-link active" %>
-      <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-      <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Disabled</a>
-    </nav>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <div class="container">
+          <div class="navbar-header">
+  				<%= link_to "Book Review", root_path, class: "navbar-brand" %>
+  		  </div>
+          <ul class="nav navbar-nav">
+				<li><%= link_to "Sign Up", new_user_registration_path, class:"btn btn-outline-info" %></li>
+				<% if user_signed_in? %>
+				  <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-outline-info" %></li>
+				<% else %>
+				  <li><%= link_to "Log In", new_user_session_path, class:"btn btn-primary" %></li>
+				<% end %>
+		  </ul>
+          <% if user_signed_in? %>
+            <%= link_to "Add Book", new_book_path, class:"btn btn-primary" %>
+          <% end %>
+
+	   </div>
+	</nav>
   </body>
-  
+
   <body>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
