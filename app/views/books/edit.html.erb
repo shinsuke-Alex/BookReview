@@ -1,3 +1,8 @@
 <h1>Edit book</h1>
 
-<%= render 'form' %>
+<%= form_for @book, :html => { :multipart => true } do |f| %>
+  <%= f.text_field :title, label: "Book Title" %>
+  <%= f.text_field  :description %>
+  <%= f.text_field  :author %>
+  <%= f.button :submit, :class => "btn btn-primary"  %>
+<% end %>
